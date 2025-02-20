@@ -9,7 +9,7 @@ void Buzzer_init() {
 }
 
 void Buzzer_on() {
-#ifdef LED_POSTIVE_LOGIC
+#ifdef BUZZER_POSTIVE_LOGIC
 	GPIO_ARR_setPinState(BUZZER_PIN, LOGIC_HIGH);
 #else
 	GPIO_ARR_setPinState(BUZZER_PIN,LOGIC_LOW);
@@ -18,7 +18,7 @@ void Buzzer_on() {
 }
 
 void Buzzer_off() {
-#ifdef LED_POSTIVE_LOGIC
+#ifdef BUZZER_POSTIVE_LOGIC
 	GPIO_ARR_setPinState(BUZZER_PIN, LOGIC_LOW);
 #else
 	GPIO_ARR_setPinState(BUZZER_PIN,LOGIC_HIGH);
